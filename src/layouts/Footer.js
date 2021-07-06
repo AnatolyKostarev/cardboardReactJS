@@ -8,7 +8,7 @@ export default function Footer() {
         <div>
             <footer>
     <section id="footer">
-        <p class="footer-text">&copy; www.gofra-ural.ru 2021 , все права защищены</p>
+        <p className="footer-text">&copy; www.gofra-ural.ru 2021 , все права защищены</p>
     </section> 
 </footer>
         </div>

@@ -11,7 +11,7 @@ export default function Modal() {
                 <div className="popup-cross">x</div>
                 <div className="popup-form">
                     <p className="popup-form__title">Получите индивидуальное предложение</p>
-                    <p class="popup-form__subtitle">на производство и поставку изделий</p>
+                    <p className="popup-form__subtitle">на производство и поставку изделий</p>
                         <form id="form" 
                               className="popup-form__get" 
                               action="./mailer/smart.php" 
