@@ -1,0 +1,401 @@
+/*Блок с шапкой приложения*/
+
+.header {
+    padding: calc(var(--base-size-xl) * 4) 0 calc(var(--base-size-xl) - 2px) 0;
+}
+.header .container {
+    width: 960px;
+}
+/*иконка бургер меню, которая отображается на экранах с малым разрешением*/
+
+.header-logo__icon {
+   display: none;
+}
+
+/*логотип, который отображается на экранах с малым разрешением вместо основного логотипа*/
+
+.header-logo__mobile {
+    display: none;
+}
+
+.header-text { 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-text__button {
+    display: flex;
+    align-items: center;
+    padding: var(--base-size-l) calc(var(--base-size-xl) + 4px);
+    color: var(--button-text-color);
+    background: var(--button-bgcolor);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: var(--main-border-radius);
+}
+
+.header-text__button:hover {
+    background: var(--button-bgcolor-hover);
+}
+
+.header-text__button:focus {
+    background: var(--button-bgcolor-pressed);
+}
+
+.header-text__icon {
+    margin-right: var(--base-size-m);
+}
+
+.header-text__phone {
+    position: relative;
+    margin-right: calc(var(--base-size-l) * 2);
+    font-size: 22px;
+    font-weight: 500;
+} 
+
+.header-text__phone:nth-child(1)::after {
+    position: absolute;
+    display: block;
+    right: -14px;
+    bottom: -6px;
+    content: '';
+    width: 1px;
+    height: calc(var(--base-size-xl) * 2);
+    background: #cfcfcf;
+}
+
+/*КОНЕЦ БЛОКА HEADER*/
+
+/* НАЧАЛО БЛОКА МЕДИАЗАПРОСОВ .HEADER*/
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    .header {
+        padding: 22px 0;
+    }
+    .col-md-8 {
+        padding-left: 145px;
+    }
+    .header .container {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .header-logo__main {
+        max-width: calc(var(--base-size-xl) * 10 - 10px); /*155px;*/
+    } 
+    .header-logo {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 16px;
+    }
+    .header-text {
+        height: calc(var(--base-size-l) * 4 - 2px); /* заданная height 44px - двойная высота элемента в макете позволяет расположить номера телефонов друг над другом и вытеснить кнопу в отдельный столбецб который также по высоте 44рх и заполнен кнопкой*/
+        flex-flow: column;
+        flex-wrap: wrap;
+        align-items: flex-end;
+    }
+    .header-text__phone {
+        font-size: 16px;
+        padding-bottom: 3px;
+    }
+
+    .header-text__phone:nth-child(1)::after {
+        width: 0;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+    .header {
+        padding: 22px 0;
+    }
+    .navigation {
+        display: none;
+    }
+    .header-logo__main {
+        max-width: calc(var(--base-size-xl) * 9 - 3px); /*155px;*/
+    }
+    .header-text {
+        height: calc(var(--base-size-l) * 4 - 2px); /* заданная height 44px - двойная высота элемента в макете позволяет расположить номера телефонов друг над другом и вытеснить кнопу в отдельный столбецб который также по высоте 44рх и заполнен кнопкой*/
+        flex-flow: column;
+        flex-wrap: wrap;
+        align-items: flex-end;
+    }
+    .header-text__phone {
+        font-size: 14px;
+        padding-bottom: calc(var(--base-size-s) + 1px); /*6px*/
+        margin-right: var(--base-size-xl); /*16px;*/
+    }
+    .header-text__phone:nth-child(1)::after {
+        width: 0;
+        /*background: transparent;*/ /*можно было задать прозрачный фон*/
+        /* opacity: 0; */ /*можно было задать прозрачность элементу с помощью opacity*/
+    }
+    .header-text__button {
+        padding: var(--base-size-l) calc(var(--base-size-xl) + -5px);
+    }
+    .header-logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-left: 33px;
+    }
+}
+
+@media screen and (min-width: 540px) and (max-width:575.98px) {
+    .header {
+        padding: 22px 0;
+    }
+    .header .container {
+        width: 100%;
+    }
+
+    .header-logo__main {
+        max-width: calc(var(--base-size-xl) * 7 - 1px); /*155px;*/
+    }
+    .header-logo {
+        display: flex;
+        align-items: center;
+    }
+    .header-text {
+        height: calc(var(--base-size-l) * 4 - 2px); /* height 44px - двойная выоста элемента в макете*/
+        flex-flow: column;
+        flex-wrap: wrap;
+        align-items: flex-end;
+    }
+    .header-text__phone {
+        font-size: 14px;
+        padding-bottom: calc(var(--base-size-s) + 1px); /*5px;*/
+        margin-right: -30px;
+    }
+    .header-text__phone:nth-child(1)::after {
+        width: 0;
+    }
+    /*скрытие основного логотипа с текстом для больших экранов*/
+    .header-logo__main {
+        display: none;
+    }
+    /*отображение логотипа для малых экранов вместо основного логотипа с текстом*/
+    .header-logo__mobile {
+        display: block;
+        width: calc(var(--base-size-xl) * 2 + 3px);  /*35px;*/
+        height: calc(var(--base-size-xl) * 2 + 2px); /*35px;*/
+        padding: var(--base-size-m) calc(var(--base-size-m) - 2px);    /*8px 6px;*/
+        margin-top: auto;
+        margin-bottom: auto;
+        background: var(--button-bgcolor);
+        border-radius: var(--main-border-radius);
+    }    
+    .header-logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-right: 24px;
+    }
+}
+
+@media screen and (min-width: 455px) and (max-width:539.98px) {
+    .header .container {
+        width: 100%;
+    }
+    .header {
+        padding: calc(var(--base-size-xl) - 2px) calc(var(--base-size-xl) - 14px);  /*14px 15px;*/
+    }
+    .header-text {
+        height: calc(var(--base-size-l) * 4 - 2px); /* height 44px - двойная выоста элемента в макете*/
+        flex-flow: column;
+        flex-wrap: wrap;
+        align-items: flex-end;
+    }
+    .header-text__phone {
+        font-size: 13px;
+        padding-bottom: calc(var(--base-size-s) + 1px);  /*5px;*/
+        margin-right: -110px;
+    }
+    .header-text__phone:nth-child(1)::after {
+        width: 0;
+    }
+
+    /*отображение логотипа для малых экранов вместо основного логотипа с текстом*/
+    .header-logo__mobile {
+        display: block;
+        width: calc(var(--base-size-xl) * 2 + 3px);  /*35px;*/
+        height: calc(var(--base-size-xl) * 2 + 2px); /*35px;*/
+        padding: var(--base-size-m) calc(var(--base-size-m) - 2px);    /*8px 6px;*/
+        margin-top: auto;
+        margin-bottom: auto;
+        background: var(--button-bgcolor);
+        border-radius: var(--main-border-radius);
+    }
+
+    /*скрытие основного логотипа с текстом для больших экранов*/
+    .header-logo__main {
+        display: none;
+    }
+    .header-logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .header-text__button {
+        font-size: 0;
+        padding: calc(var(--base-size-m) - 1px) calc(var(--base-size-m) - 1px);   /*7px 7px;*/
+        margin-bottom: calc(var(--base-size-s) + 1px);  /*5px;*/
+    }
+    .header-text__icon {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width:454.98px) {
+    .header .container {
+        width: 100%;
+    }
+    .header {
+        padding: calc(var(--base-size-xl) - 2px) calc(var(--base-size-xl) - 1px); /*14px 15px;*/
+    }
+    .header-text {
+        height: calc(var(--base-size-l) * 4 - 2px); /* height 44px - двойная выоста элемента в макете*/
+        flex-flow: column;
+        flex-wrap: wrap;
+        align-items: flex-end;
+    }
+    .header-text__phone {
+        font-size: 13px;
+        padding-bottom: calc(var(--base-size-s) + 1px);   /*5px;*/
+        margin-right: -80px;
+    }
+    .header-text__phone:nth-child(1)::after {
+        width: 0;
+    }
+    .header-logo__mobile {
+        display: block;
+        width: calc(var(--base-size-xl) * 2 + 3px); /*35px;*/
+        height: calc(var(--base-size-xl) * 2 + 2px); /*35px;*/
+        padding: var(--base-size-m) calc(var(--base-size-m) - 2px); /*8px 6px;*/
+        background: var(--button-bgcolor);
+        border-radius: var(--main-border-radius);
+    }
+    .header-logo__main {
+        display: none;
+    }
+    .header-logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .header-text__button {
+        font-size: 0;
+        padding: calc(var(--base-size-m) - 1px) calc(var(--base-size-m) - 1px);   /*7px 7px;*/
+        margin-bottom: calc(var(--base-size-s) + 1px);  /*5px;*/
+    }
+    .header-text__icon {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width:424.98px) {
+    .header .container {
+        width: 100%;
+    }
+    .header {
+        padding: calc(var(--base-size-xl) - 2px) 0; /*14px 15px;*/
+    }
+    .header-text {
+        height: calc(var(--base-size-l) * 4 - 2px); /* height 44px - двойная выоста элемента в макете*/
+        flex-flow: column;
+        flex-wrap: wrap;
+        align-items: flex-end;
+    }
+    .header-text__phone {
+        font-size: 12px;
+        padding-bottom: calc(var(--base-size-s) + 1px);  /*5px;*/
+        margin-right: -52px;
+    }
+    .header-text__phone:nth-child(1)::after {
+        width: 0;
+    }
+    .header-logo__mobile {
+        display: block;
+        width: calc(var(--base-size-xl) * 2 + 3px); /*35px;*/
+        height: calc(var(--base-size-xl) * 2 + 2px); /*35px;*/
+        padding: var(--base-size-m) calc(var(--base-size-m) - 2px); /*8px 6px;*/
+        background: var(--button-bgcolor);
+        border-radius: var(--main-border-radius);
+    }
+    .header-logo__main {
+        display: none;
+    }
+    .header-logo {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 16px;
+    }
+    .header-text__button {
+        font-size: 0;
+        padding: calc(var(--base-size-m) - 1px) calc(var(--base-size-m) - 1px);  /*7px 7px;*/
+        margin-bottom: calc(var(--base-size-s) + 1px); /*5px;*/
+    }
+    .header-text__icon {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 374.98px) {
+    .header .container {
+        width: 100%;
+    }
+    .header {
+        padding: calc(var(--base-size-xl) - 2px) 0; /*14px 15px;*/
+    }
+    .header-text {
+        height: calc(var(--base-size-l) * 4 - 2px); /*height 44px - двойная выоста элемента в макете*/
+        flex-flow: column;
+        flex-wrap: wrap;
+        align-items: flex-end;
+    }
+    .header-text__phone {
+        font-size: 12px;
+        padding-bottom: calc(var(--base-size-s) + 1px); /*5px;*/
+        padding-right: calc(var(--base-size-m) + 2px); /*10px;*/
+        margin-right: -16px;
+    }
+    .header-text__phone:nth-child(1)::after {
+        width: 0;
+        /*background: transparent;*/ /*можно было задать прозрачный фон*/
+        /* opacity: 0; */ /*можно было задать прозрачность элементу с помощью opacity*/
+    }
+    .header-logo__mobile {
+        display: block;
+        width: calc(var(--base-size-xl) * 2 + 3px); /*35px;*/
+        height: calc(var(--base-size-xl) * 2 + 2px); /*35px;*/
+        padding: var(--base-size-m) calc(var(--base-size-m) - 2px); /*8px 6px;*/
+        background: var(--button-bgcolor);
+        border-radius: var(--main-border-radius);
+    }
+    .header-logo__main {
+        display: none;
+    }
+    .header-logo {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .header-text__button {
+        font-size: 0;
+        padding: calc(var(--base-size-m) - 1px) calc(var(--base-size-m) - 1px);  /*7px 7px;*/
+        margin-bottom: calc(var(--base-size-s) + 4px);  /*6px;*/
+    }
+    .header-text__icon {
+        margin: 0;
+    }
+    .header-text__phone__number {
+        font-weight: 900;
+    }
+}
+/* КОНЕЦ БЛОКА МЕДИАЗАПРОСОВ .HEADER*/
