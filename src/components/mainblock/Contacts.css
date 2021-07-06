@@ -1,0 +1,175 @@
+#contacts {
+    position: relative;
+    background: #f4f4f4;
+}
+.contacts-map {
+    height: calc(var(--base-size-xl) * 34 + 6px); /*550px;*/
+}
+.contacts-title {
+    display: none;
+}
+.contacts-item {
+    position: absolute;
+    background: #fff;
+    padding: 33px 40px 39px 58px;
+    width: calc(var(--base-size-xl) * 19 + 11px); /*315px;*/
+    height: calc(var(--base-size-xl) * 24 + 6px); /*390px;*/
+    top: 10%;
+    left: 12%;
+    z-index: 1;
+}
+.contacts-item__adress {
+    margin-bottom: calc(var(--base-size-xl) * 2 - 1px); /*31px;*/
+    position: relative;
+}
+.contacts-item__adress::before {
+    position: absolute;
+    content: url(./main/geo_dot_icon.png);
+    left: -33px;
+    top: var(--base-size-s); /*4px;*/
+}
+.contacts-item__title {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    color: var(--main-text-color);
+}
+.contacts-item__subtitle {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+}
+.contacts-item__phone {
+    position: relative;
+    margin-bottom: calc(var(--base-size-xl) - 2px); /*14px;*/
+}
+.contacts-item__phone::before {
+    position: absolute;
+    content: url(./main/cell_icon.png);
+    left: -33px;
+    top:  var(--base-size-s); /*4px;*/
+}
+.contacts-item__button {
+    margin-bottom: calc(var(--base-size-l) * 2 + 1px); /*25px;*/
+}
+.contacts-button {
+    padding: var(--base-size-l) calc(var(--base-size-l) * 2 + 4px); /*12px 28px;*/
+    background-color: var(--button-bgcolor);
+    border: none;
+    cursor: pointer;
+    border-radius: var(--main-border-radius);
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 500;
+    color: var(--main-title-text-color);
+}
+.contacts-button:focus {
+    outline: none;
+    background: var(--button-bgcolor-pressed);
+}
+.contacts-button:hover {
+    background: var(--button-bgcolor-hover);
+}
+.contacts-item__mail {
+    position: relative;
+}
+.contacts-item__mail::before {
+    position: absolute;
+    content: url(./main/mail_icon.png);
+    left: -33px;
+    top: var(--base-size-s); /*4px;*/
+}
+#contacts a {
+    text-decoration: none;
+    color: var(--main-text-color);
+}
+.contacts-item__subtitle:hover {
+    color:  #ff9d00;
+}
+
+/* НАЧАЛО БЛОКА МЕДИАЗАПРОСОВ .CONTACTS*/
+
+@media screen and (min-width: 1024px) and (max-width: 1198.98px) {
+    .contacts-item {
+        left: 80px;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1023.98px) {
+    .contacts-item {
+        left: 64px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    #contacts {
+        background: var(--main-bgcolor);
+    }
+    .contacts-item {
+        margin-bottom: 28px;
+    }
+    .contacts-map {
+        margin-bottom: calc(var(--base-size-l) + 2px); /*14px;*/
+    }
+    .contacts-item {
+        width: 100%;
+        position: relative;
+        left: 0;
+        top: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        text-align: center;
+    }
+    .contacts-title {
+        display: block;
+        font-size: 22px;
+        line-height: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #313131;
+        margin-bottom: calc(var(--base-size-xl) + 3px); /*19px;*/
+    }
+    .contacts-item__adress::before,
+    .contacts-item__phone::before,
+    .contacts-item__mail::before {
+        display: none;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 767.98px) {
+    #contacts {
+        background: var(--main-bgcolor);
+    }
+    .contacts-item {
+        margin-bottom: 28px;
+    }
+    .contacts-map {
+        width: 90%;
+        height: calc(var(--base-size-xl) * 26 + 4px); /*420px;*/
+        margin: 0 auto;
+        margin-bottom: calc(var(--base-size-l) + 2px); /*14px;*/
+    }
+    .contacts-item {
+        width: 100%;
+        position: relative;
+        left: 0;
+        top: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        text-align: center;
+    }
+    .contacts-title {
+        display: block;
+        font-size: 22px;
+        line-height: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #313131;
+        margin-bottom: calc(var(--base-size-xl) + 3px); /*19px;*/
+    }
+    .contacts-item__adress::before,
+    .contacts-item__phone::before,
+    .contacts-item__mail::before {
+        display: none;
+    }
+}
+/* КОНЕЦ БЛОКА МЕДИАЗАПРОСОВ .CONTACTS  */
