@@ -10,14 +10,13 @@ import Feedback from './Feedback.js';
 import Contacts from './Contacts';
 import Modal from '../modals/Modal';
 
-
 const featuresNum = [
     { topic: '5 лет', description: 'На рынке изделий из гофрокартона' },
     { topic: 'до 5 000 000 м', description: 'Ежемесячный объем производства гофрокартона' },
     { topic: '4 000 м', description: 'Площадь склада' } 
-];
-
-const featuresCard = [
+  ];
+  
+  const featuresCard = [
     { 
         title: 'Производство',
         subtitle: '4 технологические линии способны выполнить любой заказ любой сложности',
