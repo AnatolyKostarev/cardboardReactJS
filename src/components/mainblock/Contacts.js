@@ -32,12 +32,7 @@ export default function Contacts(props) {
                 <a href="mailto:urals.karton@gmail.com"><span className="contacts-item__subtitle">urals.karton@gmail.com</span></a>
             </div>
         </div>
-        <div className="contacts-map">
-            
-            <iframe title="1" src="https://yandex.ru/map-widget/v1/?um=constructor%3A1c5d7ae69cb72d617559afd6072c7289794de00742c8d892124935a71afa173c&amp;source=constructor" width="100%" height="100%" frameBorder="0" scrolling="no"></iframe>
-  
-
-</div>
+        <div id="contacts-map"></div>
     </section>
     )
 }

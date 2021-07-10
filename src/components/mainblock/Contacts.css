@@ -2,7 +2,8 @@
     position: relative;
     background: #f4f4f4;
 }
-.contacts-map {
+#contacts-map {
+    width: 100%;
     height: calc(var(--base-size-xl) * 34 + 6px); /*550px;*/
 }
 .contacts-title {
