@@ -29,9 +29,9 @@ const featuresNum = [
         delay: 1000,
         pic: 'images/feartures/free_simples.png'
     }
-];
-
-const featuresSlip = [
+  ];
+  
+  const featuresSlip = [
     { 
         title: 'Стабильное качество',
         subtitle: 'Собственная лаборатория кон- тролирует качество на каждом этапе производства',
