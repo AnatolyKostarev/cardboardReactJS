@@ -15,7 +15,7 @@
     padding: 33px 40px 39px 58px;
     width: calc(var(--base-size-xl) * 19 + 11px); /*315px;*/
     height: calc(var(--base-size-xl) * 24 + 6px); /*390px;*/
-    top: 10%;
+    top: 15%;
     left: 12%;
     z-index: 1;
 }
