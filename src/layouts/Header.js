@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Logoheader from '../components/Logoheader';
+import Navbar from '../components/Navbar';
 import './Header.css';
 
 export default function Header() {
@@ -22,7 +23,8 @@ export default function Header() {
     return (
         <>
         <header>
-           <Logoheader />
+            <Navbar navBar={navBar} />
+            <Logoheader />
         </header>
         </>
     )

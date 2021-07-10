@@ -7,10 +7,10 @@ export default function Footer() {
     return (
         <div>
             <footer>
-    <section id="footer">
-        <p className="footer-text">&copy; www.gofra-ural.ru {new Date().getFullYear()} , все права защищены</p>
-    </section> 
-</footer>
+                <section id="footer">
+                    <p className="footer-text">&copy; www.gofra-ural.ru {new Date().getFullYear()} , все права защищены</p>
+                </section> 
+            </footer>
         </div>
     )
 }
