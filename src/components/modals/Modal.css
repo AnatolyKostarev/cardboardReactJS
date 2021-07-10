@@ -34,11 +34,10 @@
     position: absolute;
     content: '';
     border: 1px solid #fff;
-    border-radius: 50%;
     width: 20px;
     height: 20px;
-    right: -30px;
-    top: -30px;
+    right: 6px;
+    top: 6px;
     color: #fff;
     transform: scale(1.6);
     cursor: pointer;
@@ -148,17 +147,17 @@
 
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
     .popup {
-        left: calc(50% - 335px);
-        width: 670px;
+        left: calc(50% - 355px);
+        width: 710px;
     }
 }
 @media screen and (min-width: 576px) and (max-width: 767.98px) {
     .popup {
-        left: calc(50% - 240px);
-        width: 480px;
+        left: calc(50% - 270px);
+        width: 540px;
     }
     .popup-form {
-        height: 332px;
+        height: 340px;
     }
     .popup-form__title {
         font-size: 20px;
@@ -188,11 +187,11 @@
 }
 @media screen and (min-width: 540px) and (max-width: 575.98px) {
     .popup {
-        left: calc(50% - 225px);
-        width: 450px;
+        left: calc(50% - 250px);
+        width: 500px;
     }
     .popup-form {
-        height: 330px;
+        height: 280px;
     }
     .popup-form__title {
         font-size: 20px;
@@ -256,15 +255,11 @@
 }
 @media screen and (min-width: 425px) and (max-width: 454.98px) {
     .popup {
-        left: calc(50% - 165px);
-        width: 330px;
+        left: calc(50% - 195px);
+        width: 390px;
     }
     .popup-form {
-        height: 325px;
-    }
-
-    .popup-form__get {
-        width: 330px;
+        height: 310px;
     }
     .popup-form__title {
         font-size: 18px;
@@ -280,14 +275,7 @@
     }
     .popup__inputphone {
         display: block;
-        padding: calc(var(--base-size-xl) + 2px) calc(var(--base-size-xl) * 5 - 10px);
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .popup__inputname {
-        display: block;
-        padding: calc(var(--base-size-xl) + 2px) calc(var(--base-size-xl) * 5 - 10px);
+        padding: calc(var(--base-size-xl) + 2px) calc(var(--base-size-xl) * 5 + 14px);
         margin-right: 0;
         margin-bottom: 10px;
     }
@@ -304,8 +292,9 @@
 }
 @media screen and (min-width: 375px) and (max-width: 424.98px) {
     .popup {
-        left: calc(50% - 140px);
-        width: 280px;
+        left: calc(50% - 170px);
+        width: 340px;
+        height: 340px;
     }
     .popup-title {
         height: 60px;
@@ -313,11 +302,11 @@
         padding: 20px 0;
     }
     .popup-form {
-        height: 310px;
+        height: 300px;
     }
 
     .popup-form__get {
-        width: 280px;
+        width: 340px;
     }
     .popup-form__title {
         font-size: 16px;
@@ -334,14 +323,13 @@
     }
     .popup__inputphone {
         display: block;
-        padding: calc(var(--base-size-xl) + 2px) calc(var(--base-size-xl) * 5 - 35px);
+        padding: calc(var(--base-size-xl) + 2px) calc(var(--base-size-xl) * 5 - 13px);
         margin-right: 0;
         margin-bottom: 10px;
     }
-
     .popup__inputname {
         display: block;
-        padding: calc(var(--base-size-xl) + 2px) calc(var(--base-size-xl) * 5 - 35px);
+        padding: calc(var(--base-size-xl) + 2px) calc(var(--base-size-xl) * 5 - 13px);
         margin-right: 0;
         margin-bottom: 10px;
     }
@@ -358,22 +346,21 @@
 }
 @media screen and (min-width: 320px) and (max-width: 374.98px) {
     .popup {
-        left: calc(50% - 115px);
-        width: 230px;
+        left: calc(50% - 145px);
+        width: 290px;
+        height: 294px;
     }
     .popup-title {
         height: 54px;
         font-size: 18px;
-        padding: 5px 0;
+        padding: 18px 0;
     }
     .popup-form {
-        height: 310px;
+        height: 295px;
     }
-
     .popup-form__get {
-        width: 230px;
+        width: 290px;
     }
-
     .popup-form__title {
         font-size: 14px;
         font-weight: 700;
@@ -389,18 +376,16 @@
     }
     .popup__inputphone {
         display: block;
-        padding: calc(var(--base-size-xl) + 2px) calc(var(--base-size-xl) * 5 - 55px);
+        padding: calc(var(--base-size-xl) + 2px) calc(var(--base-size-xl) * 5 - 30px);
         margin-right: 0;
         margin-bottom: 10px;
     }
-
     .popup__inputname {
         display: block;
-        padding: calc(var(--base-size-xl) + 2px) calc(var(--base-size-xl) * 5 - 55px);
+        padding: calc(var(--base-size-xl) + 2px) calc(var(--base-size-xl) * 5 - 30px);
         margin-right: 0;
         margin-bottom: 10px;
     }
-
     .popup__button {
         display: block;
         padding: calc(var(--base-size-xl) + 1px) calc(var(--base-size-xl) * 2 + 2px);
@@ -411,4 +396,11 @@
         padding-top: 6px;
         padding-bottom: 0;
     }
+    .popup-cross {
+        top: -28px;
+        right: calc(50% - 10px);
+        border-radius: 5px;
+    }
 }
+
+/* КОНЕЦ БЛОКА МЕДИАЗАПРОСОВ МОДАЛЬНОГО ОКНА OVERLAY*/
