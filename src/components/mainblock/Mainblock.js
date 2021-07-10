@@ -171,7 +171,10 @@ export default class Mainblock extends Component {
                     productionTitle={productionTitle}
                     productionCard={productionCard}
                 />
-                <Order orderCard={orderCard} />
+                <Order 
+                    orderCard={orderCard}
+                    mail={mailEnter} 
+                />
                 <Products
                     topSlider={topSlider}
                     sliderDescriptionTitle={sliderDescriptionTitle}
@@ -185,7 +188,7 @@ export default class Mainblock extends Component {
                     feedbackSlider={feedbackSlider}
                     feedbackTitle={feedbackTitle}
                 />
-                <Modal />
+                <Modal mail={mailEnter}/>
                 <Contacts />
             </main>
         )
