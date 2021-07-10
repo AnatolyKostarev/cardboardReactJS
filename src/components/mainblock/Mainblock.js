@@ -56,11 +56,11 @@ const featuresNum = [
         delay: 1800,
         pic: 'images/feartures/hydro_adds.png'
     }
-];
-
-const productionTitle = 'наша Продукция';
-
-const productionCard = [
+  ];
+  
+  const productionTitle = 'наша Продукция';
+  
+  const productionCard = [
     {
         cardtitle: 'Гофрокороб 4-х клапанный',
         details: 'Подробнее',
