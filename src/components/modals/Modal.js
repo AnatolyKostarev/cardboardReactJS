@@ -1,8 +1,23 @@
 /* jshint ignore:start*/
 import React from 'react';
+import emailjs from 'emailjs-com';
 import './Modal.css';
 
-export default function Modal() {
+export default function Modal(props) {
+    let {mail: m} = props;
+    function sendEmail(e) {
+        e.preventDefault();
+    
+        emailjs.sendForm(m.service, m.template, e.target, m.user)
+          .then((result) => {
+              alert('Благодарим за проявленный интерес! Ваша заявка принята! ' + result.text);
+          }, (error) => {
+              alert('Произошла ошибка! Попробутей подать заявку позже!' + error.text);
+          });
+
+          e.target.reset();
+      }
+
     return (
         <section id="modal">
         <div className="overlay">
@@ -13,19 +28,26 @@ export default function Modal() {
                     <p className="popup-form__title">Получите индивидуальное предложение</p>
                     <p className="popup-form__subtitle">на производство и поставку изделий</p>
                         <form id="form" 
-                              className="popup-form__get" 
-                              action="./mailer/smart.php" 
-                              method="POST">
+                            className="popup-form__get" 
+                            onSubmit={sendEmail}>
                             <label className="popup-form__label" htmlFor="tel">Введите ваш номер телефона:</label>
                             <input 
-                                className="popup__inputphone" 
                                 id="tel" 
+                                className="popup__inputphone" 
+                                type="tel"
                                 autoComplete="off" 
-                                type="tel" 
+                                placeholder="+7 (___) ___-__-__"  
                                 name="user__phone" 
-                                placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ" 
                                 required />
-                            <button type="submit" className="popup__button">Оставить заявку!</button>
+                            <input 
+                                className="popup__inputname" 
+                                id="name" 
+                                autoComplete="off" 
+                                type="text" 
+                                name="user__name" 
+                                placeholder="Ваше имя" 
+                                required />
+                            <input type="submit" className="popup__button" value="Оставить заявку!" />
                         </form>
                          <span className="popup__minorder">*Минимальный заказ 500шт</span>
                 </div>
