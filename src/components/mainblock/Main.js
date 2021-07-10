@@ -1,10 +1,25 @@
 /* jshint ignore:start*/
 
 import React from 'react';
+import emailjs from 'emailjs-com';
 import Fade from 'react-reveal/Fade';
 import './Main.css';
 
-export default function Main() {
+export default function Main(props) {
+    let {mail: m} = props;
+    function sendEmail(e) {
+        e.preventDefault();
+    
+        emailjs.sendForm(m.service, m.template, e.target, m.user)
+          .then((result) => {
+              alert('Благодарим за проявленный интерес! Ваша заявка принята! ' + result.text);
+          }, (error) => {
+              alert('Произошла ошибка! Попробутей подать заявку позже!' + error.text);
+          });
+
+          e.target.reset();
+      }
+
     return (
         <section id="main">
             <div className="container">
@@ -25,11 +40,16 @@ export default function Main() {
                         <div className="main-text">
                             <h3 className="main-text__get">Получите индивидуальное предложение<br/> на производство и поставку гофропродукции</h3>
                             <p className="main-text__simple">образцы и упаковка бесплатно!</p>
-                            <form id="form" className="main-text__form" action="mailer/smart.php" method="POST">
+                            <form 
+                                id="form" 
+                                className="main-text__form" 
+                                onSubmit={sendEmail}>
                                 <input 
-                                    name="user__phone" className="main-text__inputphone" autoComplete="off"
+                                    className="main-text__inputphone" 
+                                    autoComplete="off"
+                                    placeholder="Введите номер телефона" type="tel"
                                     size="23" 
-                                    placeholder="Введите номер телефона" type="tel" 
+                                    name="user__phone" 
                                     required />
                                 <button 
                                     type="submit"
