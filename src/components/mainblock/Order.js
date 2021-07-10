@@ -1,9 +1,23 @@
 /* jshint ignore:start*/
 import React from 'react';
+import emailjs from 'emailjs-com';
 import './Order.css';
 
 export default function Order(props) {
-    let { orderCard: card } = props;
+    let { orderCard: card, mail: m } = props;
+    function sendEmail(e) {
+        e.preventDefault();
+    
+        emailjs.sendForm(m.service, m.template, e.target, m.user)
+          .then((result) => {
+              alert('Благодарим за проявленный интерес! Ваша заявка принята! ' + result.text);
+          }, (error) => {
+              alert('Произошла ошибка! Попробутей подать заявку позже!' + error.text);
+          });
+
+          e.target.reset();
+      }
+
     return (
         <section id="order">
             <div className="container">
@@ -13,14 +27,11 @@ export default function Order(props) {
                     <form 
                         id="form" 
                         className="order-text__form" 
-                        action="mailer/smart.php" 
-                        method="POST">
-
+                        onSubmit={sendEmail}>
                         <label 
                             className="order-text__label" 
                             htmlFor="tel1">{card.label}
                         </label>
-
                         <input 
                             className="order-text__inputphone" 
                             id="tel1" 
