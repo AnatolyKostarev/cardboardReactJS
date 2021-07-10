@@ -85,30 +85,30 @@ const featuresNum = [
         btnBill: 'Получить расчет',
         route: 'images/production/box_sheet.jpg'
     }
-];
-
-const orderCard = {
-
+  ];
+  
+  const orderCard = {
+  
     title: 'Получите индивидуальное предложение',
     subtitle: 'на производство и поставку изделий',
     label: 'Введите ваш номер телефона:',
     btn: 'Оставить заявку!',
     span: '*Минимальный заказ 500шт'
-};
-
-const topSlider = [
-
+  };
+  
+  const topSlider = [
+  
     {route: 'images/products_slider/slider_main.jpg', desc: 'Гофропродукция'},
     {route: 'images/products_slider/gofro-slider-one.jpg', desc: 'Гофропродукция'},
     {route: 'images/products_slider/gofro-slider-two.jpg', desc: 'Гофропродукция'},
     {route: 'images/products_slider/gofro-slider-three.jpg', desc: 'Гофропродукция'},
     {route: 'images/products_slider/gofro-slider-four.jpg', desc: 'Гофропродукция'},
     {route: 'images/products_slider/gofro-slider-five.jpg', desc: 'Гофропродукция'}
-];
-
-const sliderDescriptionTitle = 'Производство';
-
-const sliderDescriptionParagraph = [
+  ];
+  
+  const sliderDescriptionTitle = 'Производство';
+  
+  const sliderDescriptionParagraph = [
     {
         title: 'Современное оборудование позволяет производить до 5 миллионов квадратных метров гофрокартона ежемесячно. Гофрокороба и лотки производятся по ГОСТу или чертежам заказчика.',
         id: 1
