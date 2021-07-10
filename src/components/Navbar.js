@@ -28,7 +28,7 @@ export default function Navbar(props) {
                         </ul>
                     </nav>  
                     <div className="header-logo__menu">
-                        <a href="#" className="header-menu__btn"> </a>
+                        <a href="/" className="header-menu__btn"> </a>
                         <span className="menu-btn__dec"></span>
                     </div>
                 </div>
