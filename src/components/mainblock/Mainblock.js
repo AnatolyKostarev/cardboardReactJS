@@ -121,11 +121,11 @@ const featuresNum = [
         title: 'Возможно нанесение цветной флексопечати на поверхность коробов.',
         id: 3
     }
-];
-
-const customersTitile = 'Наши клиенты';
-const customersCard = [
-
+  ];
+  
+  const customersTitile = 'Наши клиенты';
+  const customersCard = [
+  
     { route: 'images/customers/rise_icon_1.png', desc: 'Восход'},
     { route: 'images/customers/sterh_icon_2.png', desc: 'Стерх'},
     { route: 'images/customers/silversnow_icon_3.png', desc: 'Серебряный снег'},
