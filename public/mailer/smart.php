@@ -1,8 +1,9 @@
 <?php 
 
 $phone = $_POST['user__phone'];
+$name = $_POST['user__name'];
 
-require_once('phpmailer/PHPMailerAutoload.php');
+require_once('../cardboard2021/public/mailer/phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
 $mail->CharSet = 'utf-8';
 
@@ -29,7 +30,8 @@ $mail->isHTML(true);                                  // Set email format to HTM
 $mail->Subject = 'Поступила заявка на звонок';
 $mail->Body    = '
 	Пользователь оставил свои данные <br> 
-	Телефон: '.$phone;
+	Телефон: '.$phone + 'Имя: '.$name;
+
 $mail->AltBody = 'Это альтернативный текст';
 
 if(!$mail->send()) {
