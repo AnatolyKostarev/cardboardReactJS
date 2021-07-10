@@ -83,19 +83,33 @@ $(document).ready(function(){
     $('.main-text__inputphone, .order-text__inputphone, .popup__inputphone').mask('+7 (999) 999-99-99');
  });
 
- $('form').submit(function(event) {
-    event.preventDefault();
-    if ($('.overlay').css("display", "block"))
-        $(".overlay").css("display", "none");
-    $.ajax({
-        type: "POST",
-        url: "./mailer/smart.php",
-        data: $(this).serialize()
-        }).done(function() {
-            $(this).find("input").val("");
-            alert("Заявка успешно подана");
-            $("form").trigger("reset");
-        });
-        return false;
+//  $('form').submit(function(event) {
+//     event.preventDefault();
+//     if ($('.overlay').css("display", "block"))
+//         $(".overlay").css("display", "none");
+//     $.ajax({
+//         type: "POST",
+//         url: "../public/mailer/smart.php",
+//         data: $(this).serialize()
+//         }).done(function() {
+//             $(this).find("input").val("");
+//             alert("Заявка успешно подана");
+//             $("form").trigger("reset");
+//         });
+//         return false;
+// });
+
+    $(document).ready(function() {
+        $('.menu-btn__dec').click(function(event) {
+        $('.menu-btn__dec, .menu-mobile').toggleClass('active');
+        $('body').toggleClass('lock')
+    });
 });
+    $(document).ready(function() {
+        $('.menu-mobile__item__wrapper').click(function(event) {
+        $('.menu-btn__dec, .menu-mobile').removeClass('active');
+        $('body').removeClass('lock')
+    });
+});
+
   /* jshint ignore:end*/
