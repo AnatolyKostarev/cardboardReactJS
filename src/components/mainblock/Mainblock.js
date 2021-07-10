@@ -138,24 +138,30 @@ const featuresNum = [
     { route: 'images/customers/salavatglass_icon_10.png', desc: 'Салаватстекло'},
     { route: 'images/customers/milk_farmer_11.png', desc: 'Молочный фермер'},
     { route: 'images/customers/megi_icon_12.png', desc: 'Меги'}
-];
-
-const feedbackTitle = 'Отзывы о сотрудничестве';
-const feedbackSlider = [
-
+  ];
+  
+  const feedbackTitle = 'Отзывы о сотрудничестве';
+  const feedbackSlider = [
+  
     {route: 'images/feedback/feedback-img1.png', id: 1},
     {route: 'images/feedback/feedback-img2.png', id: 2},
     {route: 'images/feedback/feedback-img3.png', id: 3},
     {route: 'images/feedback/feedback-img1.png', id: 4},
     {route: 'images/feedback/feedback-img2.png', id: 5},
     {route: 'images/feedback/feedback-img3.png', id: 6}
-];
+  ];
+
+  const mailEnter = {
+      service: 'service_ekqmigd',
+      template: 'template_nnwgurb',
+      user: 'user_pBA6wdTbaWOwTzojch5L0'
+  };
    
 export default class Mainblock extends Component {
     render() {
         return (
             <main>
-                <Main />
+                <Main mail={mailEnter}/>
                 <Features 
                     featuresNum={featuresNum} 
                     featuresCard={featuresCard}
