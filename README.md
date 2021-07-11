@@ -10,8 +10,6 @@ In the project directory, you should run:
 
 This command installs a package and any packages that it depends on.
 
-Then you need to run in the project directory:
-
 ### `npm start`
 
 Runs the app in the development mode.\
