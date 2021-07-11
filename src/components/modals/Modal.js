@@ -36,7 +36,7 @@ export default function Modal(props) {
                                 className="popup__inputphone" 
                                 type="tel"
                                 autoComplete="off" 
-                                placeholder="+7 (___) ___-__-__"  
+                                placeholder="Введите номер телефона"  
                                 name="user__phone" 
                                 required />
                             <input 
@@ -45,7 +45,7 @@ export default function Modal(props) {
                                 autoComplete="off" 
                                 type="text" 
                                 name="user__name" 
-                                placeholder="Ваше имя" 
+                                placeholder="Ваше Имя" 
                                 required />
                             <input type="submit" className="popup__button" value="Оставить заявку!" />
                         </form>
