@@ -69,7 +69,7 @@ $(document).ready(function(){
   });
 
   $(document).ready(function() {
-    $('.header-text__button, .contacts-button').click(function() {
+    $('.header-text__button, .contacts-button, .button-o').click(function() {
     $('.overlay').slideDown(400); 
       });
   });
