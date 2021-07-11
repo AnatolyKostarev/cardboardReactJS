@@ -9,6 +9,7 @@ import Customers from './Customers';
 import Feedback from './Feedback.js';
 import Contacts from './Contacts';
 import Modal from '../modals/Modal';
+import Modalcardfour from '../modals/Modalcardfour.js';
 
 const featuresNum = [
     { topic: '5 лет', description: 'На рынке изделий из гофрокартона' },
@@ -189,6 +190,10 @@ export default class Mainblock extends Component {
                     feedbackTitle={feedbackTitle}
                 />
                 <Modal mail={mailEnter}/>
+                {/* <Modalcardfour  
+                    orderCard={orderCard} 
+                    mail={mailEnter} 
+                /> */}
                 <Contacts />
             </main>
         )

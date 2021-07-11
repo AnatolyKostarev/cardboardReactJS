@@ -1,10 +1,11 @@
 /* jshint ignore:start*/
 import React from 'react';
 import emailjs from 'emailjs-com';
-import './Order.css';
+import '../css/mainblock/Order.css';
 
 export default function Order(props) {
     let { orderCard: card, mail: m } = props;
+    
     function sendEmail(e) {
         e.preventDefault();
     

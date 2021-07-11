@@ -3,7 +3,7 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
 import Fade from 'react-reveal/Fade';
-import './Main.css';
+import '../css/mainblock/Main.css';
 
 export default function Main(props) {
     let {mail: m} = props;

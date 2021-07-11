@@ -1,7 +1,7 @@
 /* jshint ignore:start*/
 
 import React from 'react';
-import './Production.css';
+import '../css/mainblock/Production.css';
 
 export default function Production(props) {
     let {productionTitle: title, productionCard: card} = props;

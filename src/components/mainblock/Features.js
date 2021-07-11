@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-import './Features.css';
+import '../css/mainblock/Features.css';
 
 export default function Features(props) {
     let { featuresNum: f, featuresCard: card, featuresSlip: slip } = props;

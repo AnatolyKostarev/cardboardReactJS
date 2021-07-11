@@ -1,7 +1,7 @@
 /* jshint ignore:start*/
 import React from 'react';
 import Flip from 'react-reveal/Flip';
-import './Products.css';
+import '../css/mainblock/Products.css';
 
 export default function Products(props) {
     let { 

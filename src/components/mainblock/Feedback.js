@@ -1,6 +1,6 @@
 /* jshint ignore:start*/
 import React from 'react';
-import './Feedback.css';
+import '../css/mainblock/Feedback.css';
 
 export default function Feedback(props) {
     let {feedbackSlider: feedback, feedbackTitle: title} = props;

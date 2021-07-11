@@ -1,6 +1,6 @@
 /* jshint ignore:start*/
 import React from 'react';
-import './Contacts.css';
+import '../css/mainblock/Contacts.css';
 
 export default function Contacts(props) {
     return (

@@ -1,6 +1,6 @@
 /* jshint ignore:start*/
 import React from 'react';
-import './Customers.css';
+import '../css/mainblock/Customers.css';
 
 export default function Customers(props) {
     let {customersTitile: title, customersCard: card} = props;
