@@ -44,6 +44,7 @@ export default function Main(props) {
                                 id="form" 
                                 className="main-text__form" 
                                 onSubmit={sendEmail}>
+
                                 <input 
                                     className="main-text__inputphone" 
                                     autoComplete="off"
@@ -51,6 +52,7 @@ export default function Main(props) {
                                     size="23" 
                                     name="user__phone" 
                                     required />
+                                    
                                 <button 
                                     type="submit"
                                     className="main-text__button">
