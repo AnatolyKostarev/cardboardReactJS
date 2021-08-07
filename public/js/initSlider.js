@@ -79,9 +79,9 @@ $(document).ready(function(){
       });
   });
 
-  jQuery(function($){
-    $('.main-text__inputphone, .order-text__inputphone, .popup__inputphone').mask('+7 (999) 999-99-99');
- });
+//   jQuery(function($){
+//     $('.main-text__inputphone, .order-text__inputphone, .popup__inputphone').mask('+7 (999) 999-99-99');
+//  });
 
 //  $('form').submit(function(event) {
 //     event.preventDefault();
