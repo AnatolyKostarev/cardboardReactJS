@@ -2,6 +2,7 @@
     padding-bottom: calc(var(--base-size-xl) * 3 - 7px); /*41px;*/
     padding-top: 55px;
     background: var(--main-bgcolor);
+    /* display: none; */
 }
 
 #customers .container {

@@ -1,6 +1,7 @@
 #contacts {
     position: relative;
     background: #f4f4f4;
+    /* display: none; */
 }
 
 #contacts-map {

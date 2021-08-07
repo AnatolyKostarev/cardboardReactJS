@@ -1,6 +1,7 @@
 #feedback {
     padding: 60px 0;
     background: #f4f4f4;
+    /* display: none; */
 }
 
 .feedback-text__head {

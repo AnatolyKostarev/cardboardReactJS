@@ -4,6 +4,7 @@
     background: #373737 url(./images/order/Order_main_bcg_.jpg) center no-repeat;
     background-size: cover;
     z-index: 99;
+    /* display: none; */
 }
 
 #order::after {

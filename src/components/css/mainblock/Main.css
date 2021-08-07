@@ -4,6 +4,7 @@
     background: #373737 url(./images/main/main_boxes_bcg.jpg);
     background-size: cover;
     z-index: 99;
+    /* display: none; */
 }
 
 #main::after {

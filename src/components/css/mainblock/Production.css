@@ -1,6 +1,7 @@
 #production {
     padding: 60px 0 40px 0;
     background:  var(--main-bgcolor);
+    /* display: none; */
 }
 
 #production .container {
@@ -209,6 +210,7 @@
     .production-wraper {
         justify-content: center;
         padding: 0 25px 0 25px;
+        width: 406px;
     }
 
     .production-card {
@@ -251,6 +253,7 @@
     .production-wraper {
         justify-content: center;
         padding: 0 25px;
+        width: 356px;
     }
 
     .production-card {
@@ -268,7 +271,7 @@
     }
 
     .production-card img {
-        margin-right: calc(var(--base-size-m) + 2px); /*10px;*/
+        /* margin-right: calc(var(--base-size-m) + 2px); */
         width: calc(var(--base-size-xl) * 22 + 8px); /*360px;*/
     }
 
