@@ -34,12 +34,11 @@
     position: absolute;
     content: '';
     border: 1px solid #fff;
-    border-top-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-radius: 50%;
     width: 20px;
     height: 20px;
-    right: 6px;
-    top: 6px;
+    right: -25px;
+    top: -25px;
     color: #fff;
     transform: scale(1.6);
     cursor: pointer;
@@ -47,10 +46,23 @@
 }
 
 .popup-form {
+    position: relative;
     display: flex;
     flex-flow: column nowrap;
-    background: url(./modals_img/popup_bcg.jpg) center no-repeat;
+    background: url(./modals_img/modal_bcg.jpg) center no-repeat;
     background-size: cover;
+}
+
+.popup-form::after {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 101;
+
 }
 
 .popup-form__title {
@@ -59,6 +71,7 @@
     color: #ffffff;
     padding-top: 41px;
     text-align: center;
+    z-index: 102;
 }
 
 .popup-form__subtitle {
@@ -67,6 +80,7 @@
     color: #ffffff;
     padding-bottom: 23px;
     text-align: center;
+    z-index: 102;
 }
 
 .popup-form__get {
@@ -74,6 +88,8 @@
     flex-direction: column;
     align-items: center;
     margin: 0 auto ;
+    z-index: 102;
+   
 }
 
 .popup-form__label {
@@ -136,6 +152,10 @@
     background: var(--button-bgcolor-pressed);
 }
 
+.popup__button:disabled {
+    filter: grayscale(100);
+} 
+
 .popup__minorder {
     font-size: 14px;
     font-weight: 300;
@@ -143,20 +163,21 @@
     padding-top: 9px;
     padding-bottom: 22px;
     text-align: center;
+    z-index: 102;
 }
 
 /* НАЧАЛО БЛОКА МЕДИАЗАПРОСОВ МОДАЛЬНОГО ОКНА OVERLAY*/
 
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
     .popup {
-        left: calc(50% - 355px);
-        width: 710px;
+        left: calc(50% - 340px);
+        width: 680px;
     }
 }
 @media screen and (min-width: 576px) and (max-width: 767.98px) {
     .popup {
-        left: calc(50% - 270px);
-        width: 540px;
+        left: calc(50% - 245px);
+        width: 490px;
     }
     .popup-form {
         height: 340px;
@@ -257,8 +278,8 @@
 }
 @media screen and (min-width: 425px) and (max-width: 454.98px) {
     .popup {
-        left: calc(50% - 195px);
-        width: 390px;
+        left: calc(50% - 170px);
+        width: 340px;
     }
     .popup-form {
         height: 310px;
@@ -277,9 +298,15 @@
     }
     .popup__inputphone {
         display: block;
-        padding: calc(var(--base-size-xl) + 2px) calc(var(--base-size-xl) * 5 + 14px);
+        padding: calc(var(--base-size-xl) + 2px) calc(var(--base-size-xl) * 5);
         margin-right: 0;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
+    }
+    .popup__inputname {
+        display: block;
+        padding: calc(var(--base-size-xl) + 2px) calc(var(--base-size-xl) * 5);
+        margin-right: 0;
+        margin-bottom: 5px;
     }
     .popup__button {
         display: block;
@@ -345,6 +372,10 @@
         padding-top: 6px;
         padding-bottom: 0;
     }
+    .popup-cross {
+        right: 0px;
+        top: -25px;
+    }
 }
 @media screen and (min-width: 320px) and (max-width: 374.98px) {
     .popup {
@@ -399,9 +430,9 @@
         padding-bottom: 0;
     }
     .popup-cross {
-        top: -28px;
-        right: calc(50% - 10px);
-        border-radius: 5px;
+        top: -33px;
+        right: 8px;
+        border-radius: 50%;
     }
 }
 
