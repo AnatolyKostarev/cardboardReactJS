@@ -3,6 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
+import  'animate.css';
+import 'wow.js';
 import App from './App/App';
 
 ReactDOM.render(
