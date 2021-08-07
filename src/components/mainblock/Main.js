@@ -2,7 +2,6 @@
 
 import React from 'react';
 import emailjs from 'emailjs-com';
-import Fade from 'react-reveal/Fade';
 import '../css/mainblock/Main.css';
 
 export default function Main(props) {
@@ -25,18 +24,16 @@ export default function Main(props) {
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-12 col-lg-5">
-                        <Fade left duration={1500}>
-                            <div className="main-img hidden-mobile ">
+                     
+                            <div className="main-img hidden-mobile animate__animated animate__fadeInLeft">
                                 <img className="main-boxes__img" src="images/main/main-boxes-img.png" alt="Картонные коробки" />
                             </div>
-                        </Fade>
+            
                     </div>
                
                     <div className="col-12 col-md-12 col-lg-7">
-                        <Fade right duration={1500}>
-                            <h1 className="main-text__title">Производство упаковки из <br/>гофрокартона</h1>
-                            <p className="main-text__subtitle">с доставкой по всей России</p>
-                        </Fade>
+                            <h1 className="main-text__title animate__animated animate__fadeInRight">Производство упаковки из <br/>гофрокартона</h1>
+                            <p className="main-text__subtitle animate__animated animate__fadeInRight">с доставкой по всей России</p>
                         <div className="main-text">
                             <h3 className="main-text__get">Получите индивидуальное предложение<br/> на производство и поставку гофропродукции</h3>
                             <p className="main-text__simple">образцы и упаковка бесплатно!</p>
