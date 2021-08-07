@@ -93,23 +93,32 @@ export default function Modal(props) {
                             className="popup-form__get" 
                             onSubmit={sendEmail}>
                             <label className="popup-form__label" htmlFor="tel">Введите ваш номер телефона:</label>
-                            <input 
+                            {(phoneDirty && phoneError) && <div style={{color: "#fff", fontFamily: "Roboto", fontSize: "14px"}}>{phoneError}</div>}
+                            <input
+                                onBlur={e => blurHandler(e)} 
+                                onChange={e => phoneHandler(e)}
                                 id="tel" 
                                 className="popup__inputphone" 
                                 type="tel"
-                                autoComplete="off" 
-                                placeholder="Введите номер телефона"  
                                 name="user__phone" 
-                                required />
-                            <input 
-                                className="popup__inputname" 
-                                id="name" 
+                                value={phone}
                                 autoComplete="off" 
+                                placeholder="+7(___) ___ __ __" 
+                                pattern="((8|\+7)-?)?\(?\d{3}\)?-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}"
+                                required />
+                            {(nameDirty && nameError) && <div style={{color: "#fff", fontFamily: "Roboto", fontSize: "14px"}}>{nameError}</div>}
+                            <input 
+                                onBlur={e => blurHandler(e)}
+                                onChange={e => nameHandler(e)}
+                                id="name" 
+                                className="popup__inputname" 
                                 type="text" 
                                 name="user__name" 
+                                value={name}
+                                autoComplete="off" 
                                 placeholder="Ваше Имя" 
                                 required />
-                            <input type="submit" className="popup__button" value="Оставить заявку!" />
+                            <input disabled={!formValid} type="submit" className="popup__button" value="Оставить заявку!"/>
                         </form>
                          <span className="popup__minorder">*Минимальный заказ 500шт</span>
                 </div>
