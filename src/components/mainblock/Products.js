@@ -1,6 +1,5 @@
 /* jshint ignore:start*/
 import React from 'react';
-import Flip from 'react-reveal/Flip';
 import '../css/mainblock/Products.css';
 
 export default function Products(props) {
@@ -32,9 +31,7 @@ export default function Products(props) {
                     </div>
                     <div className="col-12 order-1 col-md-12 order-md-1 col-lg-5 order-lg-2 col-xl-5 order-xl-1">
                         <div className="products-text">
-                            <Flip right>
-                                <h2 className="products-text__head">{title}</h2>
-                            </Flip>
+                                <h2 className="products-text__head animate__animated animate__flipInY">{title}</h2>
                             {
                                 Object.keys(par).map(elem => (
                                     <p className="products-text__description" key={par[elem].id}>{par[elem].title}</p>
