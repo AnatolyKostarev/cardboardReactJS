@@ -21,13 +21,13 @@ const featuresNum = [
     { 
         title: 'Производство',
         subtitle: '4 технологические линии способны выполнить любой заказ любой сложности',
-        delay: 800,
+        delay: '0.2s',
         pic: 'images/feartures/Plant.png'
     },
     { 
         title: 'Бесплатные образцы',
         subtitle: 'Бесплатно делаем образцы гофроупаковки - это помогает заранее увидеть упаковку',
-        delay: 1000,
+        delay: '0.4s',
         pic: 'images/feartures/free_simples.png'
     }
   ];
@@ -36,25 +36,25 @@ const featuresNum = [
     { 
         title: 'Стабильное качество',
         subtitle: 'Собственная лаборатория кон- тролирует качество на каждом этапе производства',
-        delay: 1200,
+        delay: '0.6s',
         pic: 'images/feartures/quality.png'
     },
     { 
         title: 'Страховой запас',
         subtitle: 'Можем хранить запас гофро- продукции на своих складах и поставлять его партиями',
-        delay: 1400,
+        delay: '0.8s',
         pic: 'images/feartures/insure_inventory.png'
     },
     { 
         title: 'Флексопечать',
         subtitle: 'Возможно нанесение вашего логотипа, текста или манипуляционных знаков',
-        delay: 1600,
+        delay: '1s',
         pic: 'images/feartures/flex_print.png'
     },
     { 
         title: 'Гидрофобные добавки',
         subtitle: 'На производстве реализована технология, которая позволяет гофрокартону стать прочнее',
-        delay: 1800,
+        delay: '1.2s',
         pic: 'images/feartures/hydro_adds.png'
     }
   ];
@@ -174,7 +174,8 @@ export default class Mainblock extends Component {
                 />
                 <Order 
                     orderCard={orderCard}
-                    mail={mailEnter} 
+                    mail={mailEnter}
+                
                 />
                 <Products
                     topSlider={topSlider}
