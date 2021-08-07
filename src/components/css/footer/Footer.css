@@ -3,6 +3,7 @@ footer {
     height: calc(var(--base-size-xl) * 5 + 16px); /*93px;*/
     margin: 0;
     padding: 0;
+    /* display: none; */
 }
 .footer-text {
     padding: calc(var(--base-size-xl) * 2 + 7px) 0; /*39px 0;*/
