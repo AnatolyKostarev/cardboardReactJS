@@ -1,21 +1,83 @@
 /* jshint ignore:start*/
-import React from 'react';
+import React, {useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
+import { useFormik } from 'formik';
 import './Modal.css';
 
 export default function Modal(props) {
+
+    const formik = useFormik({
+        
+    })
+
+    const [phone, setPhone] = useState('');
+    const [name, setName] = useState('');
+    const [phoneDirty, setPhoneDirty] = useState(false);
+    const [nameDirty, setNameDirty] = useState(false);
+    const [phoneError, setPhoneError] = useState('*Обязательно для заполнения');
+    const [nameError, setNameError] = useState('*Обязательно для заполнения');
+    const [formValid, setFormValid] = useState(false);
+
+    useEffect(() => {
+        if(phoneError || nameError) {
+            setFormValid(false)
+        } else {
+            setFormValid(true)
+        }
+    }, [phoneError, nameError])
+
+    const phoneHandler =(e) => {
+        setPhone(e.target.value)
+        let regex = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+        if(e.target.value.length > 12) {
+            setPhoneError('*Неверный номер телефона. Не более 12-ти числовых символов')
+            if(!regex.test(phone)) {
+                setPhoneError('*Неверный номер телефона')
+            } else {
+                setPhoneError('')
+            }
+        }
+    }
+
+    const nameHandler =(e) => {
+        setName(e.target.value)
+        let regex = /^[А-ЯЁ]{3,20}/;
+        if(e.target.value.length < 3 || e.target.value.length > 20) {
+            setNameError('*Имя не может содержать  менее 3-х и более 20-ти символов')
+            if(!regex.test(name)) {
+                setNameError('Введите имя на кириллице!')
+                if(!e.target.value) {
+                    setNameError('*Обязательно для заполнения')  
+                }
+            }
+        } else {
+            setNameError('')
+        }
+    }
+
+    const blurHandler = (e) => {
+        // eslint-disable-next-line default-case
+        switch (e.target.name) {
+            case 'user__phone':
+                setPhoneDirty(true);
+                break;
+            case 'user__name':
+                setNameDirty(true);
+                break;
+        }
+    }
+
     let {mail: m} = props;
     function sendEmail(e) {
         e.preventDefault();
-    
         emailjs.sendForm(m.service, m.template, e.target, m.user)
           .then((result) => {
               alert('Благодарим за проявленный интерес! Ваша заявка принята! ' + result.text);
           }, (error) => {
               alert('Произошла ошибка! Попробутей подать заявку позже!' + error.text);
           });
-
-          e.target.reset();
+          setPhone('');
+          setName('');
       }
 
     return (
